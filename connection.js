@@ -5,7 +5,7 @@ const state = {
   db: null
 }
 module.exports.connect = function (done) {
-  const url = process.env.DATABASE_URL || "mongodb+srv://govi:govi@cluster0.qmc6cnq.mongodb.net/?retryWrites=true&w=majority"
+  const url = process.env.DATABASE_URL || 'mongodb+srv://govi:govi@cluster0.qmc6cnq.mongodb.net/?retryWrites=true&w=majority'
   const dbname = 'testOutq'
 
   mongoClient.connect(url, (err, data) => {
