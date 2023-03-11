@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
+const LogRocket = require('logrocket');
 
 var createError = require('http-errors');
 var express = require('express');
@@ -11,6 +12,8 @@ const sessions = require('express-session');
 var db = require('./connection');
 const hbs = require('express-handlebars');
 var app = express();
+
+LogRocket.init('uflkis/sample-project');
 
 db.connect((err) => {
     if (err) console.log("Connection Error" + err);
