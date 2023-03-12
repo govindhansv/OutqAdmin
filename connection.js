@@ -6,8 +6,8 @@ const state = {
 }
 module.exports.connect = function (done) {
   const url = 'mongodb+srv://govi:govi@cluster0.qmc6cnq.mongodb.net/?retryWrites=true&w=majority'
-  // const dbname = 'testOutq'
-  const dbname = 'devoutQ'
+  const dbname = 'testOutq'
+  // const dbname = 'devoutQ'
 
 
   mongoClient.connect(url, (err, data) => {
